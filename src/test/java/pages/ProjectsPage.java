@@ -36,7 +36,7 @@ public class ProjectsPage {
                 break;
             }
         }
-        $("#inputDescription").pressEnter();
+        $(By.className("btn")).click();
 
     }
 

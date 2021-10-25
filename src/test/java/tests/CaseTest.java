@@ -15,7 +15,7 @@ public class CaseTest extends BaseTest {
 
         new LoginPage()
                 .open()
-                .login("gapontsev91@gmail.com", "pass1234")
+                .login(user, pass)
                 .openProject("Selenide-Project")
                 .createNewCase()
                 .getCaseInfo(CaseInfoFactory.get());

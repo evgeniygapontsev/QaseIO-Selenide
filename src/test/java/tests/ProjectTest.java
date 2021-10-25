@@ -9,7 +9,7 @@ public class ProjectTest extends BaseTest {
     public void projectShouldBeCreated() {
         new LoginPage()
                 .open()
-                .login("gapontsev91@gmail.com", "pass1234")
+                .login(user, pass)
                 .createButton()
                 .createNewProject("Selenide-Project", "SP", "This is a new project!", "Public");
     }
