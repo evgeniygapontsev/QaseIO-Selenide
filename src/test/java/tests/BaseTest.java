@@ -2,7 +2,11 @@ package tests;
 
 import com.codeborne.selenide.Configuration;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
+import utils.TestListener;
 
+
+@Listeners(TestListener.class)
 public class BaseTest {
 
     @BeforeMethod

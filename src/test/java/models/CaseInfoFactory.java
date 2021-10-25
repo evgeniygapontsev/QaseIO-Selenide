@@ -1,10 +1,15 @@
 package models;
 
-public class CaseInfoFactory {
+import com.github.javafaker.Faker;
 
-    public static CaseInfo set() {
-        return new CaseInfo("Authorization test", "Actual", "Test cases without suite",
+public class CaseInfoFactory {
+    static Faker faker;
+
+    public static CaseInfo get() {
+        faker = new Faker();
+
+            return new CaseInfo(faker.job().title(), "Actual", "Test cases without suite",
                 "Blocker", "High", "Smoke", "E2E",
-                "Yes", "Not set", "Positive","Automated");
+                "Yes", "Not set", "Positive", "Automated");
     }
 }

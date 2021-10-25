@@ -4,9 +4,8 @@ import models.CaseInfo;
 import models.CaseInfoFactory;
 import org.testng.annotations.Test;
 import pages.LoginPage;
-import pages.ProjectsPage;
 
-public class CaseTest extends BaseTest{
+public class CaseTest extends BaseTest {
 
     CaseInfo caseInfo;
 
@@ -19,7 +18,7 @@ public class CaseTest extends BaseTest{
                 .login("gapontsev91@gmail.com", "pass1234")
                 .openProject("Selenide-Project")
                 .createNewCase()
-                .getCaseInfo(caseInfo = CaseInfoFactory.set());
+                .getCaseInfo(CaseInfoFactory.get());
 
         //validate case info
     }
