@@ -8,8 +8,18 @@ public class CaseInfoFactory {
     public static CaseInfo get() {
         faker = new Faker();
 
-            return new CaseInfo(faker.job().title(), "Actual", "Test cases without suite",
-                "Blocker", "High", "Smoke", "E2E",
-                "Yes", "Not set", "Positive", "Automated");
+            return CaseInfo.builder()
+                    .title(faker.job().title())
+                    .severity(3)
+                    .priority(2)
+                    .type(2)
+                    .layer(2)
+                    .isFlaky(0)
+                    .behavior(1)
+                    .automation(0)
+                    .status(0)
+                    .suite(0)
+                    .milestone(0)
+                    .build();
     }
 }

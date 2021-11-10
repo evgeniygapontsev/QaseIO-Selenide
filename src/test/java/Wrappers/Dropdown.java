@@ -1,4 +1,4 @@
-package wrappers;
+package Wrappers;
 
 import com.codeborne.selenide.Condition;
 import org.openqa.selenium.By;
@@ -14,9 +14,9 @@ public class Dropdown {
         this.fieldName = fieldName;
     }
 
-    public void selectOption(String option) {
+    public void selectOption(int option) {
         $(By.xpath(String.format("//*[@id='%s']//descendant::*[@class=' css-1hwfws3']", fieldName))).click();
-        $$(".css-1gg2qke-menu").findBy(Condition.text(option)).click();
+        $$(".css-1gg2qke-menu").findBy(Condition.text(String.valueOf(option))).click();
     }
 }
 
